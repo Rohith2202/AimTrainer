@@ -5,7 +5,7 @@ Train your aim for  fps games like Valorant, Counter strike, Call of Duty, Overw
 
 Get better at all the available fps games by practicing your aim.
 
-
+![alt text](https://github.com/Rohith2202/AimTrainer/blob/main/Aim%20Trainer-img.png?raw=true)
 
 
 To run this game:
