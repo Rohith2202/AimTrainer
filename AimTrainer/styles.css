@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+  }
+  
+  #gameball {
+    background-color: yellow;
+    width: 50px;
+    height: 50px;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  div {
+    display: flex;
+    color: red;
+  }
+  
+  
+  input {
+    background-color: green;
+    color: black;
+  }
