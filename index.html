@@ -1,0 +1,55 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Trainer</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="game_code.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+<script>
+    let scores = 0;
+
+function move() {
+    scores++;
+    let buttonWidth = document.querySelector("button").offsetWidth;
+    let buttonHeight = document.querySelector("button").offsetHeight;
+    let windowWidth = window.innerWidth - buttonWidth;
+    let windowHeight = window.innerHeight - buttonHeight;
+    let moveLeft = Math.floor(Math.random() * windowWidth);
+    let moveUp = Math.floor(Math.random() * windowHeight);
+    document.querySelector("#Score").innerHTML = scores;
+    document.querySelector("button").style.left = moveLeft + "px";
+    document.querySelector("button").style.top = moveUp + "px";
+    let red = Math.floor(Math.random() * 254);
+    let green = Math.floor(Math.random() * 254);
+    let blue = Math.floor(Math.random() * 254);
+    document.querySelector("button").style.backgroundColor = "rgb(" + red + "," + green + "," + blue + ")";
+    document.querySelector("button").style.borderColor = "rgb(" + red + "," + green + "," + blue + ")";
+}
+
+function reset() {
+    scores = 0;
+    document.querySelector("#Score").innerHTML = scores;
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let moveleft = Math.floor(Math.random() * width);
+    let moveup = Math.floor(Math.random() * height);
+    document.querySelector("button").style.left = parseInt(moveleft) + "px";
+    document.querySelector("button").style.top = parseInt(moveup) + "px";
+
+}
+</script>
+<body>
+    <input type="reset" onclick="reset()">
+    <div>
+  
+      <h1>
+        Score :&nbsp;<h1 id="Score">
+          0
+        </h1>
+      </h1>
+    </div>
+    <button onclick="move()" id="gameball"></button>
+</html>
